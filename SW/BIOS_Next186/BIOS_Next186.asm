@@ -3234,14 +3234,15 @@ int1a proc near
         push    40h
         pop     ds
         cmp     ah, 1
-        je      setclock
         ja      clockexit
+        je      setclock
         mov     dx, ds:[6ch]    ; read clock
         mov     cx, ds:[6eh]
         mov     al, ds:[70h]
+clockexit1:
+        mov     byte ptr ds:[70h], 0
 clockexit:
         cmc     ; CF = 1 on error
-clockexit1:
         pop     ds
         sti
         retf    2
@@ -3249,7 +3250,8 @@ clockexit1:
 setclock:
         mov     ds:[6ch], dx
         mov     ds:[6eh], cx
-        jmp     short clockexit1    ; CF = 0
+        stc
+        jmp     short clockexit1    
 int1a endp
 
 
