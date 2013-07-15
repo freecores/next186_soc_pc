@@ -115,7 +115,7 @@ NET "AUD_L" LOC = "Y10" |IOSTANDARD = LVCMOS33 |DRIVE = 2 |SLEW = SLOW ;
 NET "AUD_R" LOC = "V10" |IOSTANDARD = LVCMOS33 |DRIVE = 2 |SLEW = SLOW ;
 #Created by Constraints Editor (xc3s700an-fgg484-4) - 2013/05/17
 NET "CLK_50MHZ" TNM_NET = CLK_50MHZ;
-TIMESPEC TS_CLK_50MHZ = PERIOD "CLK_50MHZ" 54 ns HIGH 50%;
+TIMESPEC TS_CLK_50MHZ = PERIOD "CLK_50MHZ" 55 ns HIGH 50%;
 #Created by Constraints Editor (xc3s700an-fgg484-4) - 2013/05/17
 NET "sys_clk_in" TNM_NET = sys_clk_in;
-TIMESPEC TS_sys_clk_in = PERIOD "sys_clk_in" 8 ns HIGH 50%;
+TIMESPEC TS_sys_clk_in = PERIOD "sys_clk_in" 9 ns HIGH 50%;
